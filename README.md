@@ -17,6 +17,11 @@ Built by a team of four at the GitHub Copilot x Azure hackathon during NYC Tech 
 This was a group project. The commit history reflects how the work was divided on the day and
 does not represent the full contribution of every member.
 
+The team built two implementations in parallel and submitted whichever was ready first against
+the deadline. This is the submitted one. The second implementation, built by Raunak Choudhary
+on Azure OpenAI, is at
+[pointspilot-azure](https://github.com/raunak-choudhary/pointspilot-azure).
+
 PointsPilot answers two questions:
 
 1. **"Which of my cards should I use for this purchase?"**
