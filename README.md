@@ -2,6 +2,21 @@
 
 > Live, trustworthy credit-card reward lookups and recommendations — built in a day on **Next.js + OpenRouter + Tavily + Supabase + Vercel**.
 
+Built by a team of four at the GitHub Copilot x Azure hackathon during NYC Tech Week, June
+2026, in a roughly three hour build window.
+
+## Team
+
+| Member | GitHub |
+|---|---|
+| Govind Waghmare | [@gwaghmar](https://github.com/gwaghmar) |
+| Raunak Choudhary | [@raunak-choudhary](https://github.com/raunak-choudhary) |
+| Emily Nash | [@nashtagtech](https://github.com/nashtagtech) |
+| Yohance | [@Yohance888](https://github.com/Yohance888) |
+
+This was a group project. The commit history reflects how the work was divided on the day and
+does not represent the full contribution of every member.
+
 PointsPilot answers two questions:
 
 1. **"Which of my cards should I use for this purchase?"**

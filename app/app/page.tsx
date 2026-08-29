@@ -3,9 +3,15 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Check,
+  CreditCard,
+  Fuel,
   Gift,
+  Hotel,
   MessageCircle,
+  Plane,
   ShoppingBag,
+  ShoppingCart,
+  Sofa,
   TrendingUp,
   UserRound,
   WalletCards,
@@ -46,17 +52,32 @@ function nameFromEmail(email: string): string {
 
 /* Playful reward-y bits that drift in the background of the onboarding/auth
  * screens — pure decoration. */
-const BACKDROP_BITS = [
-  "4× dining", "✈️ 5× travel", "$0 annual fee", "🛒 6% groceries", "2% on everything",
-  "points ≈ cash", "best card, every swipe", "⛽ 3× gas", "🛋️ lounge access", "no foreign fees",
-  "💳 the right card, always", "🏨 free night certs",
+const BACKDROP_BITS: { icon?: LucideIcon; label: string }[] = [
+  { label: "4× dining" },
+  { icon: Plane, label: "5× travel" },
+  { label: "$0 annual fee" },
+  { icon: ShoppingCart, label: "6% groceries" },
+  { label: "2% on everything" },
+  { label: "points ≈ cash" },
+  { label: "best card, every swipe" },
+  { icon: Fuel, label: "3× gas" },
+  { icon: Sofa, label: "lounge access" },
+  { label: "no foreign fees" },
+  { icon: CreditCard, label: "the right card, always" },
+  { icon: Hotel, label: "free night certs" },
 ];
 function MarketingBackdrop() {
   return (
     <div className="mkt-backdrop" aria-hidden="true">
-      {BACKDROP_BITS.map((b, i) => (
-        <span key={i} className={`mkt-bit mkt-bit-${i % 6}`}>{b}</span>
-      ))}
+      {BACKDROP_BITS.map((b, i) => {
+        const Icon = b.icon;
+        return (
+          <span key={i} className={`mkt-bit mkt-bit-${i % 6}`}>
+            {Icon ? <Icon size={13} strokeWidth={2.25} aria-hidden="true" /> : null}
+            {b.label}
+          </span>
+        );
+      })}
     </div>
   );
 }
